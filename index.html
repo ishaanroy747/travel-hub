@@ -1,216 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Travel Hub | Travel Guides & Tips</title>
+    <meta name="description" content="Explore travel guides, destination tips, visa information, itineraries and practical advice for travelers around the world.">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #222;
+        }
 
-  <title>Travel Hub | Dubai Holidays, Visa Guides & Travel Tips</title>
+        header {
+            background: #ffffff;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+        }
 
-  <meta name="description" content="Explore Dubai holiday packages, international visa guides, travel tips, destination ideas and practical resources for planning your next journey.">
+        header h2 {
+            margin: 0;
+        }
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #222;
+            font-weight: 600;
+        }
 
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      color: #222;
-      background: #fff;
-    }
+        .hero {
+            padding: 90px 8%;
+            background: #f1f5f9;
+            text-align: center;
+        }
 
-    header {
-      background: #111;
-      padding: 18px 8%;
-    }
+        .hero h1 {
+            font-size: 45px;
+            margin-bottom: 20px;
+        }
 
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+        .hero p {
+            max-width: 750px;
+            margin: auto;
+            font-size: 18px;
+        }
 
-    .logo {
-      color: white;
-      font-size: 25px;
-      font-weight: bold;
-    }
+        .section {
+            padding: 60px 8%;
+        }
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 25px;
-    }
+        .cards {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
 
-    .hero {
-      background: linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
-      url("https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1600&q=80");
-      background-size: cover;
-      background-position: center;
-      padding: 120px 8%;
-      text-align: center;
-      color: white;
-    }
+        .card {
+            flex: 1;
+            min-width: 250px;
+            padding: 25px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
 
-    .hero h1 {
-      font-size: 48px;
-      margin-bottom: 20px;
-    }
-
-    .hero p {
-      max-width: 750px;
-      margin: auto;
-      font-size: 19px;
-    }
-
-    .section {
-      padding: 70px 8%;
-    }
-
-    .section h2 {
-      text-align: center;
-      margin-bottom: 35px;
-      font-size: 32px;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
-    }
-
-    .card {
-      padding: 30px;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      background: #fafafa;
-    }
-
-    .card h3 {
-      margin-bottom: 12px;
-    }
-
-    .card a {
-      display: inline-block;
-      margin-top: 15px;
-      color: #111;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    .about {
-      background: #f5f5f5;
-      text-align: center;
-    }
-
-    .about p {
-      max-width: 800px;
-      margin: auto;
-    }
-
-    footer {
-      background: #111;
-      color: white;
-      text-align: center;
-      padding: 30px;
-    }
-
-    @media(max-width: 800px) {
-      .cards {
-        grid-template-columns: 1fr;
-      }
-
-      .hero h1 {
-        font-size: 34px;
-      }
-
-      nav {
-        flex-direction: column;
-        gap: 15px;
-      }
-    }
-  </style>
+        footer {
+            background: #222;
+            color: white;
+            padding: 30px 8%;
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
 
 <header>
-  <nav>
-    <div class="logo">Travel Hub</div>
+    <h2>World Travel Hub</h2>
 
-    <div>
-      <a href="#home">Home</a>
-      <a href="#destinations">Destinations</a>
-      <a href="#visa">Visa Guides</a>
-      <a href="#blog">Travel Blog</a>
-    </div>
-  </nav>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="blogs.html">Blogs</a>
+        <a href="contact.html">Contact</a>
+    </nav>
 </header>
 
-<section class="hero" id="home">
-  <h1>Explore. Plan. Travel.</h1>
+<section class="hero">
+    <h1>Explore the World with Better Travel Information</h1>
 
-  <p>
-    Discover Dubai holiday ideas, international visa information,
-    destination guides and practical travel tips to help you plan
-    your next journey with confidence.
-  </p>
+    <p>
+        Discover destination guides, travel tips, visa information,
+        itineraries and useful resources to help you plan your next journey.
+    </p>
 </section>
 
-<section class="section" id="destinations">
-  <h2>Explore Travel Resources</h2>
+<section class="section">
+    <h2>Explore Our Travel Resources</h2>
 
-  <div class="cards">
+    <div class="cards">
 
-    <div class="card">
-      <h3>Dubai Holiday Packages</h3>
-      <p>
-        Explore Dubai travel ideas, holiday packages, itineraries,
-        attractions, hotels and useful planning tips.
-      </p>
-      <a href="https://travelsagaholidays.in/travel-services/holiday-packages-from-india/dubai-tour-packages/">Explore Dubai →</a>
+        <div class="card">
+            <h3>Destination Guides</h3>
+            <p>
+                Discover useful information about popular destinations,
+                attractions, travel seasons and planning tips.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Travel Tips</h3>
+            <p>
+                Find practical advice about budgets, itineraries,
+                transportation, accommodation and trip planning.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Visa Information</h3>
+            <p>
+                Learn about tourist visa requirements, documents,
+                application processes and important travel considerations.
+            </p>
+        </div>
+
     </div>
-
-    <div class="card" id="visa">
-      <h3>International Visa Guides</h3>
-      <p>
-        Learn about tourist visa requirements, documents,
-        application processes and important travel considerations.
-      </p>
-      <a href="https://travelsagaholidays.in/travel-services/international-tourist-visa/">Explore International Tourist Visa →</a>
-    </div>
-
-    <div class="card" id="blog">
-      <h3>Travel Blog</h3>
-      <p>
-        Read practical travel guides covering destinations,
-        itineraries, visa tips, budgets and trip planning.
-      </p>
-      <a href="#">Read Travel Guides →</a>
-    </div>
-
-  </div>
 </section>
 
-<section class="section about">
+<section class="section">
+    <h2>Latest Travel Information</h2>
 
-  <h2>Travel Information Made Simple</h2>
+    <p>
+        Browse our travel blog for destination guides, itinerary ideas,
+        visa information and practical travel advice.
+    </p>
 
-  <p>
-    Travel Hub brings together useful travel information for people
-    planning international holidays. From Dubai holiday planning and
-    destination inspiration to international visa guides and practical
-    travel tips, our goal is to make travel research easier and more
-    useful.
-  </p>
-
+    <p>
+        <a href="blogs.html">Explore Travel Blogs →</a>
+    </p>
 </section>
 
 <footer>
-  <p>© 2026 Travel Hub. All rights reserved.</p>
+    <p>© 2026 World Travel Hub. All rights reserved.</p>
 </footer>
 
 </body>
