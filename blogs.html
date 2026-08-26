@@ -1,241 +1,176 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-    <title>Travel Blog | World Travel Hub</title>
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.7;
+    color: #222;
+    background: #f7f9fc;
+}
 
-    <meta name="description" content="Read travel guides, destination tips, visa information, itineraries and practical travel advice on World Travel Hub.">
+header {
+    background: #fff;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e5e7eb;
+}
 
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+header h2 {
+    color: #111827;
+}
 
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            line-height: 1.7;
-            color: #222;
-            background: #f7f9fc;
-        }
+nav {
+    display: flex;
+    gap: 25px;
+}
 
-        header {
-            background: #ffffff;
-            padding: 20px 7%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #e5e7eb;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+}
 
-        header h2 {
-            font-size: 24px;
-            color: #111827;
-        }
+nav a:hover {
+    color: #0b74de;
+}
 
-        nav {
-            display: flex;
-            gap: 25px;
-            align-items: center;
-        }
+.hero {
+    background: linear-gradient(135deg, #0b74de, #083b66);
+    color: white;
+    text-align: center;
+    padding: 70px 20px;
+}
 
-        nav a {
-            text-decoration: none;
-            color: #333;
-            font-size: 15px;
-            font-weight: 600;
-            transition: color 0.3s ease;
-        }
+.hero h1 {
+    font-size: 44px;
+    margin-bottom: 10px;
+}
 
-        nav a:hover {
-            color: #0b74de;
-        }
+.hero p {
+    max-width: 750px;
+    margin: auto;
+}
 
-        .hero {
-            background: linear-gradient(135deg, #0b74de, #083b66);
-            color: white;
-            text-align: center;
-            padding: 80px 20px;
-        }
+main {
+    max-width: 1050px;
+    margin: auto;
+    padding: 50px 25px;
+}
 
-        .hero h1 {
-            font-size: 46px;
-            margin-bottom: 15px;
-        }
+.section-intro {
+    text-align: center;
+    margin-bottom: 35px;
+}
 
-        .hero p {
-            max-width: 760px;
-            margin: auto;
-            font-size: 18px;
-            opacity: 0.95;
-        }
+.section-intro h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
 
-        main {
-            max-width: 1050px;
-            margin: 0 auto;
-            padding: 60px 25px;
-        }
+.section-intro p {
+    color: #666;
+}
 
-        .section-intro {
-            text-align: center;
-            margin-bottom: 40px;
-        }
+/* ALL BLOG POSTS USE THIS SAME STYLE */
+.article-card {
+    background: #fff;
+    padding: 35px;
+    margin-bottom: 30px;
+    border-radius: 14px;
+    border: 1px solid #edf0f4;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+}
 
-        .section-intro h2 {
-            font-size: 30px;
-            color: #111827;
-            margin-bottom: 10px;
-        }
+.article-label {
+    display: inline-block;
+    background: #eaf4ff;
+    color: #0b74de;
+    padding: 6px 13px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
 
-        .section-intro p {
-            color: #666;
-        }
+.article-card h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
 
-        .article-card {
-            background: #ffffff;
-            padding: 38px;
-            border-radius: 14px;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
-            border: 1px solid #edf0f4;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
+.article-card h2 a {
+    color: #111827;
+    text-decoration: none;
+}
 
-        .article-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 14px 35px rgba(0, 0, 0, 0.09);
-        }
+.article-card h2 a:hover {
+    color: #0b74de;
+}
 
-        .article-label {
-            display: inline-block;
-            background: #eaf4ff;
-            color: #0b74de;
-            padding: 6px 13px;
-            border-radius: 20px;
-            font-size: 13px;
-            font-weight: bold;
-            margin-bottom: 18px;
-        }
+.article-card p {
+    color: #5f6368;
+    margin-bottom: 20px;
+}
 
-        .article-card h2 {
-            font-size: 28px;
-            line-height: 1.35;
-            margin-bottom: 15px;
-        }
+.read-more {
+    display: inline-block;
+    background: #0b74de;
+    color: white;
+    text-decoration: none;
+    padding: 11px 20px;
+    border-radius: 7px;
+    font-weight: bold;
+}
 
-        .article-card h2 a {
-            color: #111827;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
+.read-more:hover {
+    background: #083b66;
+}
 
-        .article-card h2 a:hover {
-            color: #0b74de;
-        }
+footer {
+    background: #111827;
+    color: #d1d5db;
+    text-align: center;
+    padding: 30px 20px;
+}
 
-        .article-card p {
-            color: #5f6368;
-            font-size: 16px;
-            margin-bottom: 25px;
-        }
+@media (max-width: 768px) {
 
-        .read-more {
-            display: inline-block;
-            background: #0b74de;
-            color: white;
-            text-decoration: none;
-            padding: 12px 22px;
-            border-radius: 7px;
-            font-weight: bold;
-            transition: background 0.3s ease;
-        }
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
 
-        .read-more:hover {
-            background: #083b66;
-        }
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
 
-        footer {
-            background: #111827;
-            color: #d1d5db;
-            text-align: center;
-            padding: 30px 20px;
-            margin-top: 20px;
-        }
+    .hero h1 {
+        font-size: 34px;
+    }
 
-        footer p {
-            font-size: 14px;
-        }
+    .article-card {
+        padding: 25px 20px;
+    }
 
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                gap: 15px;
-                padding: 18px 20px;
-            }
+    .article-card h2 {
+        font-size: 23px;
+    }
+}
+</style>
 
-            nav {
-                gap: 15px;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
 
-            .hero {
-                padding: 60px 20px;
-            }
 
-            .hero h1 {
-                font-size: 34px;
-            }
 
-            main {
-                padding: 40px 18px;
-            }
+<article class="article-card">
 
-            .article-card {
-                padding: 25px 20px;
-            }
-
-            .article-card h2 {
-                font-size: 23px;
-            }
-        }
-    </style>
-</head>
-
-<body>
-
-<header>
-    <h2>World Travel Hub</h2>
-
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="about.html">About</a>
-        <a href="blogs.html">Blogs</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-</header>
-
-<section class="hero">
-    <h1>Travel Blog</h1>
-    <p>
-        Explore destination guides, travel tips, itineraries and visa
-        information to help you plan your next trip.
-    </p>
-</section>
-
-<main>
-
-    <div class="section-intro">
-        <h2>Latest Travel Guide</h2>
-        <p>Useful travel information and ideas for your next adventure.</p>
-    </div>
-<article>
+    <span class="article-label">Azerbaijan Travel Guide</span>
 
     <h2>
         <a href="blogs/azerbaijan-tourist-visa-for-indians-september-2026.html">
@@ -249,40 +184,9 @@
         time and useful travel tips.
     </p>
 
-    <a href="blogs/azerbaijan-tourist-visa-for-indians-september-2026.html">
-        Read More →
+    <a class="read-more"
+       href="blogs/azerbaijan-tourist-visa-for-indians-september-2026.html">
+        Read the Full Article →
     </a>
 
 </article>
-    
-    <article class="article-card">
-
-        <span class="article-label">Dubai Travel Guide</span>
-
-        <h2>
-            <a href="https://worldtravelpath.wordpress.com/2026/08/24/9-days-dubai-honeymoon-package-a-romantic-day-by-day-dubai-itinerary/">
-                9 Days Dubai Honeymoon Package: A Romantic Day-by-Day Dubai Itinerary
-            </a>
-        </h2>
-
-        <p>
-            Planning a romantic Dubai getaway? Explore a day-by-day itinerary
-            covering experiences, attractions and ideas for couples visiting
-            Dubai.
-        </p>
-
-        <a class="read-more"
-           href="https://worldtravelpath.wordpress.com/2026/08/24/9-days-dubai-honeymoon-package-a-romantic-day-by-day-dubai-itinerary/">
-            Read the Full Article →
-        </a>
-
-    </article>
-
-</main>
-
-<footer>
-    <p>© 2026 World Travel Hub. All rights reserved.</p>
-</footer>
-
-</body>
-</html>
